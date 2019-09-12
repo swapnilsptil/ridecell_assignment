@@ -10,6 +10,7 @@ import { setUserData } from '../../redux/actions/Actions';
 import { bindActionCreators } from 'redux';
 import { API } from './../../util/Service';
 import withReduxStore from './../../util/withReduxStore';
+import RideCellMap from '../maps/Maps';
 import './HomePage.scss';
 
 /**
@@ -115,6 +116,7 @@ const HomePage = ({ userdata, history }) => {
                         <div className="home-container-title">
                             <span>User Home Page</span>
                             <span>Welcome {userInfo.display_name} </span>
+                            <RideCellMap />
                         </div>
                         <div className={`home-user-button ${showMenu ? 'home-show-menu' : ''}`} onClick={() => setShowMenu(!showMenu)}>
                             <span className="home-user-initial">
